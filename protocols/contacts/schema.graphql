@@ -1,0 +1,12 @@
+# Contacts
+#
+# Discover contacts on an endpoint
+
+type Contact {
+  name: String!
+  email: String
+}
+
+interface Contacts {
+  contacts: [Contact!]
+}

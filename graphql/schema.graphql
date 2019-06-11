@@ -1,0 +1,12 @@
+type User implements Postbox {
+}
+
+type Query implements Postbox, Contacts {
+  messages: [Message!]
+  contacts: [Contact!]
+  viewer: User
+}
+
+type Mutation implements PostboxMutatations, TokenRequestMutations {
+  sendMessage(message: String): Message
+}

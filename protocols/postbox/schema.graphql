@@ -1,0 +1,15 @@
+# Postbox
+#
+# Send messages to an endpoint
+
+type Message {
+  message: String!
+}
+
+interface Postbox {
+  messages: [Message!]
+}
+
+interface PostboxMutatations {
+  sendMessage(message: String): Message
+}

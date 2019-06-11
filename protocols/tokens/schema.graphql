@@ -1,0 +1,16 @@
+# Token API
+#
+# Discover events on a node
+
+type TokenResponse {
+  token: String
+}
+
+type TokenChallenge {
+  challenge: String
+}
+
+interface TokenRequestMutations {
+  requestTokenChallenge(identity: String!, signature: String!): TokenChallenge
+  exchangeChallengeToken(challenge: String, signature: String!): TokenResponse
+}
