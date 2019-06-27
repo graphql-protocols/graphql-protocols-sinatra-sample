@@ -58,7 +58,6 @@ module TestAPI
       operation_name = body["operationName"]
       context = {}
 
-
       schema = Dir["#{File.dirname(__FILE__)}/protocols/**/*.graphql","#{File.dirname(__FILE__)}/graphql/schema.graphql"].map { |x|  File.read(x) }.join      
 
       puts schema

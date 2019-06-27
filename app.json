@@ -1,0 +1,5 @@
+{
+  "name": "GraphQL protocols sample",
+  "description": "Simple graphql protocols sample",
+  "repository": "https://github.com/graphql-protocols/graphql-protocols-sinatra-sample.git"
+}

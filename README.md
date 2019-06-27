@@ -15,6 +15,12 @@ bundle exec rackup
 
 Then navigate to `http://localhost:9292/graphiql` to check out your GraphQL endpoint.
 
+Or you can deploy to heroku:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+And go to your endpoint /graphiql to see your endpoint
+
 ## Concept
 
 In this sample we're implementing a couple of protocols. This exists out of 2 parts. The protocols itself and the implementation.
