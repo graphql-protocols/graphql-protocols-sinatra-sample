@@ -5,8 +5,12 @@
 type Contact {
   name: String!
   email: String
+  phone: String
+  website: String
+  avatar: String
 }
 
+# Implementation of the postbox protocol on https://github.com/graphql-protocols/graphql-protocols/blob/master/draft/contacts.md
 interface Contacts {
   contacts: [Contact!]
 }

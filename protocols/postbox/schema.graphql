@@ -6,10 +6,12 @@ type Message {
   message: String!
 }
 
+# Implementation of the postbox protocol on https://github.com/graphql-protocols/graphql-protocols/blob/master/draft/postbox.md
 interface Postbox {
   messages: [Message!]
 }
 
+# Implementation of the postbox protocol on https://github.com/graphql-protocols/graphql-protocols/blob/master/draft/postbox.md
 interface PostboxMutatations {
   sendMessage(message: String): Message
 }

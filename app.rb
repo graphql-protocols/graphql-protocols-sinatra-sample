@@ -22,6 +22,9 @@ end
 class Query
   include Messages
   include Contacts
+  def viewer
+    nil
+  end
 end
 
 class Mutation
@@ -55,7 +58,11 @@ module TestAPI
       operation_name = body["operationName"]
       context = {}
 
-      schema = Dir["**/*.graphql"].map { |x|File.read(x) }.join      
+
+      schema = Dir["#{File.dirname(__FILE__)}/protocols/**/*.graphql","#{File.dirname(__FILE__)}/graphql/schema.graphql"].map { |x|  File.read(x) }.join      
+
+      puts schema
+
       built_schema = GraphQL::Schema.from_definition(schema, default_resolve: Resolver)
       result = built_schema.execute(query, variables: variables, context: context, operation_name: operation_name)
       content_type :json 
